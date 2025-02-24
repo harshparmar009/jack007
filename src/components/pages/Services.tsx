@@ -48,7 +48,7 @@ function Services() {
     <div>
       <Element name="services">
         <div className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto ">
-        <h1>
+        <h1 className='w-full flex items-center justify-center'>
           <WordPullUpDemo />
         </h1>
         <p className="md:text-center py-4 md:w-1/2 mx-auto text-xl md:text-2xl text-gray-500">
