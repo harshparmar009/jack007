@@ -6,13 +6,13 @@ import NumberTicker from "@/components/magicui/number-ticker";
 import { PiCheckBold } from "react-icons/pi";
 import Link from "next/link";
 import { InfiniteMovingLogos } from "@/components/ui/infinite-moving-logos";
-import introModel from "../../../public/images/introModel.png";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+// import introModel from "../../../public/images/introModel.png";
+// import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 import { ShootingStars } from "../ui/shooting-stars";
 import { StarsBackground } from "../ui/stars-background";
 // import offerLogo from '../../../public/images/16284.jpg'
-import mainLogo from '../../../public/logo/logo-company.png'
+import mainLogo from '../../../public/logo/4.png'
 
 function HeroSection() {
   const offerings = [
@@ -77,7 +77,7 @@ function HeroSection() {
                   </Link>
                 </div>
 
-                <div className="flex items-center justify-center gap-2">
+                {/* <div className="flex items-center justify-center gap-2">
                   <a
                     href="#"
                     className="relative w-10 h-10 text-white bg-black 
@@ -85,7 +85,7 @@ function HeroSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaGithub className="z-20 icon" />
+                    <FaInstagram className="z-20 icon" />
                   </a>
                   <a
                     href="#"
@@ -96,7 +96,7 @@ function HeroSection() {
                   >
                     <FaLinkedin className="z-20 icon" />
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
 

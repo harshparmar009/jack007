@@ -8,6 +8,8 @@ import { GrClose } from "react-icons/gr";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import jackLogo from "../../../public/logo/logo-company.png";
+import Lottie from "lottie-react";
+import whatsappData from './Animation.json'
 
 function Navbar() {
   const phoneNumber = "+917791819490"; // Replace with your desired phone number
@@ -222,7 +224,23 @@ function Navbar() {
         >
           Request Call
         </button> */}
+
       </Element>
+   
+      <div className='fixed right-0 bottom-14 z-30 '>
+            <a href="https://wa.me/message/CGH2XPVBAWLLJ1"
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+
+        <Lottie
+        animationData={whatsappData} 
+        loop={true} // Set to false if you want it to play only once
+        autoplay={true} // Set to false if you want to control playback
+        style={{ width: 80, height: 80 }} // Adjust size as needed
+        />
+        </a>
+    </div> 
     </div>
   );
 }
