@@ -1,3 +1,6 @@
+"use client";
+
+
 import Calendly from '../../lib/calendly'
 import Navbar from "@/components/pages/navbar";
 import { PiCheckCircle } from "react-icons/pi";
@@ -8,7 +11,7 @@ const checkItemVariants = {
   visible: { opacity: 1, x: 0 },
 };
 
-const Meeting = () => {
+export default function Meeting(){
 
 
 
@@ -75,4 +78,3 @@ const Meeting = () => {
   );
 };
 
-export default Meeting;
