@@ -1,15 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Lottie from "lottie-react";
-import whatsappData from './Animation.json'
+// import Lottie from "lottie-react";
+// import whatsappData from './Animation.json'
 
 function Footer() {
-  const phoneNumber = "+917791819490"; // Replace with your desired phone number
+  // const phoneNumber = "+917791819490"; // Replace with your desired phone number
 
-  const makeCall = () => {
-    window.location.href = `tel:${phoneNumber}`;
-  };
+  // const makeCall = () => {
+  //   window.location.href = `tel:${phoneNumber}`;
+  // };
 
   return (
     <div>
@@ -38,11 +38,11 @@ function Footer() {
       </div>
     </footer>
 
-    <div className='z-50 fixed bottom-[5px] right-[5px]'>
+    {/* <div className='z-50 fixed bottom-[5px] right-[5px]'>
         <button onClick={makeCall}>
          <Lottie animationData={whatsappData} loop={true}  style={{ width: 80, height: 80 }} />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
