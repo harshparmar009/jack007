@@ -8,7 +8,7 @@ function LetsMakeThingsHappenSection() {
     { name: "Instagram", icon: Instagram, color: "hover:text-pink-500", url: "https://www.instagram.com/jackinfosoft/" },
     // { name: "LinkedIn", icon: Linkedin, color: "hover:text-blue-700", url: "https://linkedin.com" },
     // { name: "GitHub", icon: Github, color: "hover:text-gray-800 dark:hover:text-gray-200", url: "https://github.com" },
-    // { name: "YouTube", icon: Youtube, color: "hover:text-red-600", url: "https://youtube.com" },
+    { name: "YouTube", icon: Youtube, color: "hover:text-red-600", url: "https://youtube.com" },
   ]
 
   return (
@@ -55,7 +55,7 @@ function LetsMakeThingsHappenSection() {
     //     />
     //   </div>
     // </section>
-    <div className="w-full max-w-md mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+    <div className="w-full max-w-md mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mt-[2rem] mb-[2rem]">
       <h2 className="text-xl font-bold text-center mb-6">Connect With Me</h2>
       <div className="grid grid-cols-3 gap-4">
         {socialLinks.map((social) => (
