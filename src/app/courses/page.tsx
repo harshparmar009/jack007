@@ -1,23 +1,35 @@
-"use client"
-
-import { useState } from 'react'
-import { motion } from 'framer-motion'
 import Navbar from "@/components/courses-navbar";
 import Footer from "@/components/footer";
 import Image from 'next/image';
-import SeoMastery from '/public/images/seo-mastery.jpg'
+import { ShootingStars } from '@/components/ui/shooting-stars';
+import { StarsBackground } from '@/components/ui/stars-background';
+// import SeoMastery from '/public/images/seo-mastery.jpg'
 
 export default function Courses() {
 
-    const [email, setEmail] = useState('');
-    const [notify, setNotify] = useState(false);
+  const offerings = [
+    { img: "/images/1.png", title: "Digital Marketing" },
+    { img: "/images/2.png", title: "A.I." },
+    { img: "/images/3.png", title: "News Channel ADs" },
+    { img: "/images/4.png", title: "Movie Ads" },
+    { img: "/images/5.png", title: "Advance Seo" },
+    { img: "/images/6.png", title: "Content Ads" },
+    { img: "/images/7.png", title: "Web/App Devs" },
+    { img: "/images/8.png", title: "PPC Ad" },
+    { img: "/images/9.png", title: "E-Mail Marketing" },
+    { img: "/images/10.png", title: "Digital Marketing" },
+    // { img: "/images/01.png", title: "Podcast & Interview Ad" },
+  ];
+
+    // const [email, setEmail] = useState('');
+    // const [notify, setNotify] = useState(false);
   
-    const handleNotify = () => {
-      if (email) {
-        setNotify(true);
-        // You can add logic here to send email data to a backend or API.
-      }
-    };
+    // const handleNotify = () => {
+    //   if (email) {
+    //     setNotify(true);
+    //     // You can add logic here to send email data to a backend or API.
+    //   }
+    // };
 
   return (
     <div
@@ -29,46 +41,79 @@ bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_b
  bg-[size:14px_24px]"
   >
       <Navbar/>
-      <div className="flex flex-col md:flex-row items-center justify-center mt-[10rem]  px-8 bg-gray-100">
-      {/* Left Section */}
-      <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
-        <h2 className="text-lg text-[#FF0000] font-semibold">Coming Soon</h2>
-        <h1 className="text-4xl md:text-5xl font-bold text-black">SEO Mastery</h1>
-        <p className="text-xl md:text-2xl text-gray-700">
-          Unlock the secret of SEO mastery
-        </p>
-        
-        <div className="mt-4 flex flex-col md:flex-row items-center gap-4">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="px-4 py-2 border rounded-md text-lg focus:outline-none"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <button
-            onClick={handleNotify}
-            className="px-6 py-2 bg-blue-600 text-white rounded-md text-lg font-semibold hover:bg-blue-700"
-          >
-            Notify Me
-          </button>
-        </div>
-        {notify && (
-          <p className="mt-2 text-green-600">You have been successfully added to the notification list!</p>
-        )}
-      </div>
+      
+    <section className="mx-auto bg-neutral-900 rounded-[40px] w-full py-6 mt-[8rem]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           
 
-      {/* Right Section */}
-      <div className="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
+            <div className="text-left text-white mb-12 w-full text-center ">
+             
+              <h2 className="md:text-5xl text-4xl font-bold mb-4 text-red-700">
+                WE PROVIDE YOU BEST ADs MARKETING COURSES
+              </h2>
+
+              {/* <div className="w-[100px] h-[100px]">
+                <Image
+                src={offerLogo}
+                alt="logo"
+                width={100}
+                height={100}
+                className="w-full h-full object-cover"
+                />
+              </div> */}
+
+              <p className="md:text-2xl text-xl ">
+                Over{" "}
+                <span className="font-semibold text-red-600">200+</span>{" "}
+                media options across{" "}
+                <span className="font-semibold text-red-600">45 cities</span>{" "}
+                Pan India
+              </p>
+
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+              {offerings.map((offering) => (
+                <div
+                  key={offering.title}
+                  className="bg-white w-full rounded-lg text-center transition-all duration-300 hover:shadow-xl 
+              hover:-translate-y-1 w-full flex items-center flex-col cursor-pointer z-30"
+                >
+          {/* <div className="flex justify-center mb-4">
+                <offering.icon className="h-10 w-10 " />
+              </div> */}
+
+    <div className="relative group w-full bg-white rounded-lg overflow-hidden shadow-lg">
+      {/* Image Section */}
+      <div className="w-full h-[200px] px-2 mt-2 relative">
         <Image
-          src={SeoMastery} // Add your image path here
-          alt="SEO Mastery"
-          width={500}
-          height={500}
-          className="rounded-lg shadow-lg"
+          src={offering.img}
+          className="w-full h-full object-cover"
+          width={1000}
+          height={1000}
+          alt="logo-pic"
         />
       </div>
+      
+      {/* Title */}
+      <h3 className="text-lg font-semibold w-full bg-white text-black rounded-b-lg p-2">
+        {offering.title}
+      </h3>
+      
+      {/* Add to Cart Button */}
+      <button className="absolute bottom-0 left-0 w-full bg-blue-600 text-white py-2 opacity-0 group-hover:opacity-100 translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+        Add to Cart
+      </button>
     </div>
+
+    </div>
+              ))}
+            </div>
+          <ShootingStars />
+          <StarsBackground />
+          </div>
+
+        </section>
     <Footer/>
     </div>
   )

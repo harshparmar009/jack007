@@ -27,28 +27,28 @@ export default function Home() {
       {/* <Landing/> */}
       <HeroSection/>
 
-    //      <Services/>
+      <Services/>
 
-    //     <section className="py-20">
-    //     <ScrollBasedVelocityDemo />
-    //    </section>
+      <section className="py-20">
+        <ScrollBasedVelocityDemo />
+      </section>
       
-    // <Process/>
+    <Process/>
 
-    //    <div>
-    //      <h1 style={{ textAlign: 'center', padding: '2rem 0' }}>Client Feedback</h1>
-    //     <Feedback/>
-    //    </div>
+       <div>
+         <h1 style={{ textAlign: 'center', padding: '2rem 0' }}>Client Feedback</h1>
+        <Feedback/>
+       </div> 
 
-    //    <Element name="guarentees">
-    //      <ShootingStarsAndStarsBackgroundDemo />
-    //    </Element>
+        <Element name="guarentees">
+         <ShootingStarsAndStarsBackgroundDemo />
+       </Element> 
 
-    //    <section className="my-10 md:py-20 xl:w-4/5 2xl:w-[68%] md:mx-auto">
-    //    <LetsMakeThingsHappenSection />
-    //    </section>  
+       <section className="flex items-center justify-center p-4 bg-gray-50 dark:bg-gray-900">
+       <LetsMakeThingsHappenSection />
+       </section>  
 
-    //  <Footer/> 
+     <Footer/> 
     </div>
   );
 }

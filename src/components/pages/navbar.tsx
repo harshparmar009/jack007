@@ -7,9 +7,9 @@ import Link from "next/link";
 import { GrClose } from "react-icons/gr";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
-import jackLogo from "../../../public/logo/logo-company.png";
-// import Lottie from "lottie-react";
-// import whatsappData from './Animation.json'
+import jackLogo from "../../../public/logo/4.png";
+import Lottie from "lottie-react";
+import whatsappData from './Animation.json'
 
 function Navbar() {
   const phoneNumber = "+917791819490"; // Replace with your desired phone number
@@ -227,6 +227,11 @@ function Navbar() {
 
       </Element>
 
+      <div className='z-50 fixed bottom-[5px] right-[5px]'>
+        <button onClick={makeCall}>
+         <Lottie animationData={whatsappData} loop={true}  style={{ width: 80, height: 80 }} />
+        </button>
+      </div>
     </div>
   );
 }
