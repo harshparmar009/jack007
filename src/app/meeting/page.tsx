@@ -1,7 +1,4 @@
-"use client";
-
-
-import Calendly from "./calendly";
+import Calendly from '../../lib/calendly'
 import Navbar from "@/components/pages/navbar";
 import { PiCheckCircle } from "react-icons/pi";
 import { motion } from "framer-motion";
