@@ -42,7 +42,7 @@ bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_b
   >
       <Navbar/>
       
-    <section className="mx-auto bg-neutral-900 rounded-[40px] w-full py-6 mt-[8rem]">
+    <section className="mx-auto bg-neutral-900 rounded-[40px] w-full py-6 mt-[10rem] mb-[2rem]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            
 
@@ -114,6 +114,7 @@ bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_b
           </div>
 
         </section>
+        
     <Footer/>
     </div>
   )

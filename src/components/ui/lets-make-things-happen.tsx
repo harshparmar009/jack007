@@ -3,12 +3,12 @@ import { Twitter, Facebook, Instagram, Linkedin, Github, Youtube, ExternalLink }
 
 function LetsMakeThingsHappenSection() {
   const socialLinks = [
-    { name: "Twitter", icon: Twitter, color: "hover:text-blue-400", url: "https://twitter.com" },
-    { name: "Facebook", icon: Facebook, color: "hover:text-blue-600", url: "https://facebook.com" },
-    { name: "Instagram", icon: Instagram, color: "hover:text-pink-500", url: "https://instagram.com" },
-    { name: "LinkedIn", icon: Linkedin, color: "hover:text-blue-700", url: "https://linkedin.com" },
-    { name: "GitHub", icon: Github, color: "hover:text-gray-800 dark:hover:text-gray-200", url: "https://github.com" },
-    { name: "YouTube", icon: Youtube, color: "hover:text-red-600", url: "https://youtube.com" },
+    // { name: "Twitter", icon: Twitter, color: "hover:text-blue-400", url: "https://twitter.com" },
+    { name: "Facebook", icon: Facebook, color: "hover:text-blue-600", url: "https://www.facebook.com/jackinfosoft" },
+    { name: "Instagram", icon: Instagram, color: "hover:text-pink-500", url: "https://www.instagram.com/jackinfosoft/" },
+    // { name: "LinkedIn", icon: Linkedin, color: "hover:text-blue-700", url: "https://linkedin.com" },
+    // { name: "GitHub", icon: Github, color: "hover:text-gray-800 dark:hover:text-gray-200", url: "https://github.com" },
+    // { name: "YouTube", icon: Youtube, color: "hover:text-red-600", url: "https://youtube.com" },
   ]
 
   return (

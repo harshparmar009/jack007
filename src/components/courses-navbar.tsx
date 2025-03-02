@@ -67,7 +67,7 @@ function Navbar() {
           </a>
 
           <Link
-            href={"./meeting"}
+            href={"./courses"}
             className="
             py-3 
             px-6
@@ -76,9 +76,9 @@ function Navbar() {
             rounded-[6px]
             border-2
             border-black
-            text-white
+            text-black
             hover:text-black
-            bg-[#121212]
+            bg-white
             transition
             duration-200
             hidden md:block
@@ -86,7 +86,7 @@ function Navbar() {
               dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),
               4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] "
           >
-            Book a call
+            Courses
           </Link>
     
         </div>
@@ -151,7 +151,7 @@ function Navbar() {
       </div>
           <Link href={"/"}>
           <Image
-            src={"/logo/logo-company.png"}
+            src={"/logo/4.png"}
             alt="Logo"
             width={1000}
             height={1000}

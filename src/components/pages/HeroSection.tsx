@@ -12,7 +12,7 @@ import Image from "next/image";
 import { ShootingStars } from "../ui/shooting-stars";
 import { StarsBackground } from "../ui/stars-background";
 // import offerLogo from '../../../public/images/16284.jpg'
-import mainLogo from '../../../public/logo/1.png'
+import mainLogo from '../../../public/logo/1-removebg.png'
 
 function HeroSection() {
   const offerings = [
