@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { Link as ScrollLink, Element } from "react-scroll";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,12 +17,20 @@ function Navbar() {
   // const makeCall = () => {
   //   window.location.href = `tel:${phoneNumber}`;
   // };
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+917791819490"; // Replace with your WhatsApp number
+    if (!isClient) return; // Prevents running in SSR
+
+    const phoneNumber = "917791819490"; // Remove the "+" for WhatsApp API
     const message = encodeURIComponent("Hello, I'm interested in your courses!");
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
-    window.open(whatsappUrl, "_blank"); // Opens in a new tab
+    window.open(whatsappUrl, "_blank");
   };
 
 

@@ -79,13 +79,22 @@
 
 "use client";
 
+import { useEffect, useState } from "react";
 import Navbar from "@/components/pages/navbar";
 
 export default function Meeting() {
-  const phoneNumber = "+917791819490"; // Replace with your desired phone number
+  const phoneNumber = "917791819490"; // Remove the "+" for better compatibility
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Ensures the component runs only in the browser
+  }, []);
 
   const makeCall = () => {
-    window.location.href = `tel:${phoneNumber}`;
+    if (isClient) {
+      window.location.href = `tel:${phoneNumber}`;
+    }
   };
 
   return (
@@ -103,7 +112,6 @@ export default function Meeting() {
         {/* Add a simple form or a contact button here */}
         <div className="mt-6">
           <button
-            // href="mailto:your-email@example.com"
             onClick={makeCall}
             className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition"
           >
