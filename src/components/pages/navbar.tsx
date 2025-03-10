@@ -8,8 +8,8 @@ import { GrClose } from "react-icons/gr";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import jackLogo from "../../../public/logo/4.png";
-// import Lottie from "lottie-react";
-// import whatsappData from './Animation.json'
+import Lottie from "lottie-react";
+import whatsappData from './Animation.json'
 
 function Navbar() {
   // const phoneNumber = "+917791819490"; // Replace with your desired phone number
@@ -17,6 +17,14 @@ function Navbar() {
   // const makeCall = () => {
   //   window.location.href = `tel:${phoneNumber}`;
   // };
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "+917791819490"; // Replace with your WhatsApp number
+    const message = encodeURIComponent("Hello, I'm interested in your courses!");
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    window.open(whatsappUrl, "_blank"); // Opens in a new tab
+  };
+
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -28,8 +36,8 @@ function Navbar() {
     <div className="">
       <Element
         name="top"
-        className="overflow-hidden sticky  z-50 
-    bg-black "
+        className="overflow-hidden fixed top-0 w-full  z-50 
+    bg-black py-[5px]"
       >
         <div
           className="overflow-hidden rounded-[6px] top-5 sticky md:mx-auto z-50 
@@ -37,13 +45,15 @@ function Navbar() {
    justify-between py-1 px-4 md:px-8 mx-6"
         >
           <Link href={"/"}>
-            <Image
+          <div className="w-[50px] h-[50px] hidden md:flex" >
+           <Image
               src={jackLogo}
               alt="Logo"
               width={1000}
               height={1000}
-              className="w-[90px] rounded-2xl hidden md:flex"
-            />
+              className="w-full h-full object-cover rounded-2xl"
+              />
+              </div>
           </Link>
 
           <div className="absolute right-1/2 translate-x-1/2 transform">
@@ -59,6 +69,7 @@ function Navbar() {
               <ScrollLink
                 to="services"
                 smooth={true}
+                // href={'/'}
                 className="hover:text-[#30D866]"
               >
                 Services
@@ -67,6 +78,7 @@ function Navbar() {
               <ScrollLink
                 to="guarentees"
                 smooth={true}
+                // href={'/'}
                 className="hover:text-[#30D866]"
               >
                 Guarentees
@@ -117,7 +129,7 @@ function Navbar() {
             >
               <button
                 onClick={() => setShowMenu(!showMenu)}
-                className=" pl-[2rem] font-bold text-[3rem] text-white"
+                className=" pl-[2rem] font-bold text-[2rem] text-white"
               >
                 {showMenu ? <GrClose /> : <GiHamburgerMenu />}
               </button>
@@ -136,6 +148,7 @@ function Navbar() {
                     <ScrollLink
                       to="services"
                       smooth={true}
+                      // href={'/'}
                       className='cursor-pointer'
                       onClick={toggleMenu}
                     >
@@ -145,6 +158,7 @@ function Navbar() {
                     <ScrollLink
                       to="process"
                       smooth={true}
+                      // href={'/'}
                       className='cursor-pointer'
                       onClick={toggleMenu}
                     >
@@ -154,6 +168,7 @@ function Navbar() {
                     <ScrollLink
                       to="guarentees"
                       smooth={true}
+                      // href={'/'}
                       className='cursor-pointer'
                       onClick={toggleMenu}
                     >
@@ -196,24 +211,30 @@ function Navbar() {
               )}
             </div>
           </div>
+
           <Link href={"/"}>
+          <div className="w-[50px] h-[50px]">
             <Image
-              src={"/logo/logo-company.png"}
+              src={"/logo/4.png"}
               alt="Logo"
               width={100}
               height={100}
-              className="w-28 rounded-2xl"
+              className="w-full h-full object-cover rounded-2xl"
             />
+
+          </div>
           </Link>
 
           <Link href={"/meeting"}>
+          <div className="w-[40px] h-[40px] mr-[2rem] ">
             <Image
               src={"/icons/call-logo.svg"}
-              width={1000}
+              width={100}
               alt="CALL-LOGO"
-              height={1000}
-              className="w-[5rem] pr-[2rem]"
-            />
+              height={100}
+              className="w-full h-full object-cover"
+              />
+            </div>
           </Link>
 
         </div>
@@ -227,11 +248,11 @@ function Navbar() {
 
       </Element>
 
-      {/* <div className='z-50 fixed bottom-[5px] right-[5px]'>
-        <button onClick={makeCall}>
+      <div className='z-50 fixed bottom-[5px] right-[5px]'>
+        <button onClick={handleWhatsAppClick} >
          <Lottie animationData={whatsappData} loop={true}  style={{ width: 80, height: 80 }} />
         </button>
-      </div> */}
+      </div>
     </div>
   );
 }
